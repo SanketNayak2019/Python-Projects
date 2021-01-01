@@ -6,7 +6,6 @@ import pytesseract
 import cv2 as cv
 import numpy as np
 from progress import ProgressBar
-from IPython import display
 import math
         
 
@@ -77,5 +76,5 @@ class NewsAnalyzer:
                 if(currCol>=numCol):
                     currCol = 0
                     currRow+=1
-            display(canvas)
-        if not found: print('No results for this word')
+            canvas.show()
+        if not found: print('No results for this word\n')
